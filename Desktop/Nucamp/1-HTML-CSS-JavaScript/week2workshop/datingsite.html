@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dating Site</title>
+        <link rel="stylesheet" href="datingsite.css">
+    </head>
+    <body>
+        <form  action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="POST" enctype="multipart/form-data">  
+    
+            <fieldset>
+                <legend>Your Face</legend>
+                <div>
+                    <label for="avatar" >Upload Your Image</label>
+                    <input type="file" id="avatar" name="avatar" required>
+                </div>
+                Image Preview: <img id="preview" width="500">
+            
+            </fieldset>
+            <fieldset>
+                <legend>Your Details</legend>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                    <div>
+                        <label>Gender</label>
+                        <input type="radio" id="woman" name="gender" value="woman" required>
+                        <label for="woman">Woman</label>
+                        <input type="radio" id="man" name="gender" value="man" required>
+                        <label for="man">Man</label>
+                        <input type="radio" id="other" name="gender" value="other" required>
+                        <label for="other">Other</label>
+                    </div>
+                    <div>
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age">
+                    </div>
+                    <div>
+                        <label for="color">Favorite Color</label>
+                        <input type="color" id="color" name="color">
+                    </div>
+                    <div>
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                            <option value="brazil">Brazil</option>
+                            <option value="france">france</option>
+                            <option value="japan">Japan</option>
+                            <option value="libya">Lybia</option>
+                            <option value="usa">U.S.A.</option>
+                        
+                        
+                        </select>
+                    </div>
+                    <div>
+                        <label for="salary">Salary</label>
+                        <span class="range-caption">Poor</span>
+                        <input type="range" id="salary" name="salary" min="0" max="100" value="500">
+                        <span class="range-caption">Rich</span>
+                    </div>
+
+                </div>
+            
+            
+            </fieldset>
+
+            <Fieldset>
+                <legend>Your Contact Information</legend>
+                <div>
+                    <label for="email">email </label>
+                    <input type="text" name="email" id="email" required>
+
+                </div>
+                <div>
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div>
+                    <label for="address">Address</label>
+                    <textarea cols="40" id="address" name="address"></textarea>
+                </div>
+                <div>
+                    <Label>Contact Methods</Label>
+                    <input type="checkbox" name="contact" id="emailCheckBox" value="email">
+                    <label for="emailCheckBox">Email</label>
+                    <input type="checkbox" name="contact" id="phoneCheckbox" value="phone">
+                    <label for="phoneCheckbox">Phone</label>
+                </div>
+            </Fieldset>
+                <div>
+                    <input type="submit">
+                </div>
+
+                
+         </form>
+         <script src="https://url.nucamp.co/datingjs"></script>
+    </body>
+
+
+</html>
