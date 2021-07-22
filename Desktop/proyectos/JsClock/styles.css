@@ -1,0 +1,92 @@
+*, *::after* ::before{
+  box-sizing: border-box;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body {
+    background: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 111vh;
+    overflow: hidden;
+}
+
+.reloj{
+  width: 300px;
+  height: 300px;
+  background-color: rgba(138, 120, 113, 0.8);
+  border-radius: 50%;
+  border: 2px solid black;
+  position: relative;
+}
+
+.reloj .number{
+    --rotacion: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotacion));
+    font-size: 2rem;
+
+}
+
+.reloj .number1{--rotacion: 30deg;}
+.reloj .number2{--rotacion: 60deg;}
+.reloj .number3{--rotacion: 90deg;}
+.reloj .number4{--rotacion: 120deg;}
+.reloj .number5{--rotacion: 150deg;}
+.reloj .number6{--rotacion: 180deg;}
+.reloj .number7{--rotacion: 210deg;}
+.reloj .number8{--rotacion: 240deg;}
+.reloj .number9{--rotacion: 270deg;}
+.reloj .number10{--rotacion: 300deg;}
+.reloj .number11{--rotacion: 330deg;}
+.reloj .number12{--rotacion: 360deg;}
+
+.reloj .flecha{
+    --rotacion: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid wheat;
+    border-top-left-radius: 60%;
+    border-top-right-radius: 60%;
+    z-index: 10;
+    background-color: black;
+    transform-origin: bottom;
+    transform: translate(-50%) rotate(calc(var(--rotacion)* 1deg));
+}
+
+.reloj::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 11;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+
+}
+
+.reloj .flecha.hora{
+    width: 9px;
+    height: 37%;
+    background-color: black;
+}
+
+.reloj .flecha.minutos{
+    width: 5px;
+    height: 44%;
+    background-color: rgb(36, 37, 37);
+}
+
+.reloj .flecha.segundos{
+    width: 2px;
+    height: 48%;
+    background-color: red;
+}
